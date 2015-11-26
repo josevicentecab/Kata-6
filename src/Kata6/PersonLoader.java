@@ -20,7 +20,7 @@ public class PersonLoader {
     public static ArrayList read () throws SQLException, ClassNotFoundException {
         ArrayList<Person1> lista = new ArrayList<>();
         Class.forName("org.sqlite.JDBC");
-        Connection conec = DriverManager.getConnection("jdbc:sqlite:KATA.DB");
+        Connection conec = DriverManager.getConnection("jdbc:sqlite:/Users/josevicentecabanas/Desktop/Kata6/Kata6/Libs/KATA.sDB");
         Statement state = conec.createStatement();
         ResultSet rs = state.executeQuery("SELECT * FROM PEOPLE");
         while (rs.next()) {
